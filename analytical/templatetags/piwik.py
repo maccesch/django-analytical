@@ -86,7 +86,7 @@ def contribute_to_analytical(add_node):
 
 
 def _identify(user):
-    name = user.username
+    return user.username
 
 
 def _get_additional_calls(context):
