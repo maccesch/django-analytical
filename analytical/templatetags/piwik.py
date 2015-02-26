@@ -108,6 +108,11 @@ def _get_additional_calls(context):
         del vars['userid']
 
     var_str = ''
+
+    if 'document_title' in vars:
+        var_str += '_paq.push(["setDocumentTitle", "%s"]);\n' % vars['document_title']
+        del vars['document_title']
+
     for index, (raw_name, value) in enumerate(vars.items()):
         name, scope = raw_name.split('_')
         var_str += "_paq.push(['setCustomVariable', %(index)d, '%(name)s', '%(value)s', '%(scope)s']);\n" % {
