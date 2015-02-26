@@ -67,7 +67,7 @@ class PiwikNode(Node):
                                  "must be a (string containing a) number")
 
     def render(self, context):
-        pretrack = self.get_additional_calls(context)
+        pretrack = _get_additional_calls(context)
 
         html = TRACKING_CODE % {
             'method': "['trackPageView']",
