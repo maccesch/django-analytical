@@ -127,7 +127,7 @@ def _get_additional_calls(context):
     return pretrack
 
 
-@register.simpletag(takes_context=True)
+@register.simple_tag(takes_context=True)
 def piwik_search(context, query, category=False, count=False):
     """
     Piwik search tracking template tag.
