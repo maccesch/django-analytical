@@ -25,7 +25,7 @@ TRACKING_CODE = """
   _paq.push(%(method)s);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "//%(url)s/";
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://%(url)s/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', %(siteid)s]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
